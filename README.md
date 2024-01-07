@@ -25,10 +25,10 @@ The main purpose of this project is to gain insights into various factors impact
   - What is the most common payment method?
   - What is the most selling product line?
   - Total revenue by month?
-  - Month with the largest COGS?
+  - Month with the largest COGS (cost of goods sold)?
   - Product line with the largest revenue?
   - City with the largest revenue?
-  - Product line with the largest VAT?
+  - Product line with the largest VAT (value-added tax)?
   - Which branch sold more products than the average?
   - Most common product line by gender?
   - Average rating of each product line?
