@@ -96,7 +96,7 @@ FROM sales;
 SELECT DISTINCT city, branch
 FROM sales;
 
--- -----------------------------Products------------------------------
+-- -----------------------------Product Questions------------------------------
 
 -- How many unique product lines does the data have?
 
@@ -251,3 +251,28 @@ SELECT branch, day_name, ROUND(AVG(rating),2) AS avg_ratings
 FROM sales
 GROUP BY day_name, branch
 ORDER BY branch, avg_ratings DESC;
+
+-- ---------------------------Sales Questions---------------------------------
+-- Number of sales made in each time of the day per weekday
+SELECT day_name, time_of_day, COUNT(*) as count
+FROM sales
+GROUP BY day_name, time_of_day
+ORDER BY day_name;
+
+-- Which of the customer types brings the most revenue?
+SELECT customer_type, SUM(total) as total_revenue
+FROM sales
+GROUP BY customer_type
+ORDER BY total_revenue DESC;
+
+-- Which city has the largest tax percent/ VAT (Value Added Tax)?
+SELECT city, SUM(VAT) as total_VAT
+FROM sales
+GROUP BY city
+ORDER BY total_VAT DESC;
+
+-- Which customer type pays the most in VAT?
+SELECT customer_type, SUM(VAT) as total_VAT
+FROM sales
+GROUP BY customer_type
+ORDER BY total_VAT DESC;
