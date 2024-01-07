@@ -193,3 +193,61 @@ FROM sales
 GROUP BY product_line
 ORDER BY avg_rating DESC;
 
+-- -----------------------Customer Questions-------------------------
+
+-- How many unique customer types does the data have?
+
+SELECT DISTINCT customer_type
+FROM sales;
+
+SELECT COUNT(DISTINCT customer_type)
+FROM sales;
+
+-- What is the most common customer type?
+
+SELECT customer_type, COUNT(customer_type) AS count
+FROM sales
+GROUP BY customer_type
+ORDER BY count DESC;
+
+-- What is the gender of most of the customers?
+
+SELECT gender, COUNT(*) AS count
+FROM sales
+GROUP BY gender
+ORDER BY count DESC;
+
+-- What is the gender distribution per branch?
+
+SELECT branch, gender, COUNT(branch) as count
+FROM sales
+GROUP BY gender, branch
+ORDER BY branch, gender;
+
+-- Which time of the day do customers give the most ratings?
+
+SELECT time_of_day, ROUND(AVG(rating),2) AS avg_ratings
+FROM sales
+GROUP BY time_of_day
+ORDER BY avg_ratings DESC;
+
+-- Which time of the day do customers give the most ratings per branch?
+
+SELECT branch, time_of_day, ROUND(AVG(rating),2) AS avg_ratings
+FROM sales
+GROUP BY branch, time_of_day
+ORDER BY branch, avg_ratings DESC;
+
+-- Which day of the week has the best average ratings?
+
+SELECT day_name, ROUND(AVG(rating),2) AS avg_ratings
+FROM sales
+GROUP BY day_name
+ORDER BY avg_ratings DESC;
+
+-- Which day of the week has the best average ratings per branch?
+
+SELECT branch, day_name, ROUND(AVG(rating),2) AS avg_ratings
+FROM sales
+GROUP BY day_name, branch
+ORDER BY branch, avg_ratings DESC;
