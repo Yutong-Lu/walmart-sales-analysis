@@ -1,11 +1,9 @@
 # Walmart Sales Data Analysis
 
-## About
-This project delves into Walmart Sales data to identify top-performing branches and products, analyze sales trends across different products, and understand customer behaviour. The objective is to explore how sales strategies can be enhanced and optimized. The data for this study comes from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
+## Introduction
+The main purpose of this project is to gain insights into various factors impacting the sales of different branches, and eventually explore how sales strategies can be enhanced and optimized. The data for this study comes from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
-**The main purpose of this project is to gain insights into various factors impacting the sales of different branches.**
-
-## Approach Used
+## Approaches
 1. **Data Wrangling**: Inspecting data for NULL or missing values and applying data replacement methods.
    - Build a database.
    - Create tables and insert data.
