@@ -43,3 +43,9 @@ The main purpose of this project is to gain insights into various factors impact
   - Which time of the day do customers give the most ratings per branch?
   - Which day of the week has the best average ratings?
   - Which day of the week has the best average ratings per branch?
+- Sales
+  - Number of sales made in each time of the day per weekday
+  - Which of the customer types brings the most revenue?
+  - Which city has the largest tax percent/ VAT (Value Added Tax)?
+  - Which customer type pays the most in VAT?
+
